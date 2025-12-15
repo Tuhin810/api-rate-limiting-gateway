@@ -11,12 +11,12 @@ The system is composed of four main Dockerized services.
 
 ```mermaid
 graph TD
-    User[Clients / Users] -->|HTTP Requests| Gateway[API Gateway (Node.js)]
-    Admin[Admin User] -->|Manage Config| AdminUI[React Admin UI]
+    User["Clients / Users"] -->|HTTP Requests| Gateway["API Gateway (Node.js)"]
+    Admin["Admin User"] -->|Manage Config| AdminUI["React Admin UI"]
     
     subgraph "Internal Network"
-    Gateway -->|Auth & Rate Check| Redis[(Redis Store)]
-    Gateway -->|Proxy Allowed Requests| Backend[Backend Service (Real API)]
+    Gateway -->|Auth & Rate Check| Redis[("Redis Store")]
+    Gateway -->|Proxy Allowed Requests| Backend["Backend Service (Real API)"]
     AdminUI -->|REST API| Gateway
     end
     
