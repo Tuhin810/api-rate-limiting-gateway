@@ -1,11 +1,11 @@
-# \uD83D\uDEA6 API Rate Limiting Gateway
+# 🚨 API Rate Limiting Gateway
 
 A production-grade, distributed API Gateway built with Node.js, implementing **Token Bucket Rate Limiting** using custom Redis Lua scripts for atomicity and high performance.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-production--ready-green.svg)
 
-## \uD83D\uDDFG\uFE0F System Architecture
+## 🏗️ System Architecture
 
 The system is composed of four main Dockerized services.
 
@@ -25,7 +25,7 @@ graph TD
     style Backend fill:#9cf,stroke:#333,stroke-width:2px
 ```
 
-### \uD83D\uDCCA Request Flow Lifecycle
+### 📊 Request Flow Lifecycle
 
 Every incoming request goes through a strict pipeline inside the Gateway.
 
@@ -56,12 +56,12 @@ sequenceDiagram
 
 ---
 
-## \uD83D\uDCC2 Codebase Map
+## 📂 Codebase Map
 
 ### Directory Structure
 ```
 api-rate-limiting-gateway/
-├── \uD83D\uDCC1 gateway/                  # The Core API Gateway
+├── 📁 gateway/                  # The Core API Gateway
 │   ├── app.js               # Entry point, wires middleware & routes
 │   ├── proxy.js             # http-proxy-middleware config
 │   ├── redis.js             # Redis client & Atomic Lua scripts
@@ -70,10 +70,10 @@ api-rate-limiting-gateway/
 │   │   └── rateLimiter.js   # Token Bucket implementation
 │   └── routes/              # Admin & Auth API routes
 │
-├── \uD83D\uDCC1 backend-service/          # The Real Backend (Downstream)
+├── 📁 backend-service/          # The Real Backend (Downstream)
 │   └── server.js            # Express server (Orders/Payments APIs)
 │
-├── \uD83D\uDCC1 admin-ui/                 # Management Dashboard
+├── 📁 admin-ui/                 # Management Dashboard
 │   ├── src/App.tsx          # Main React Dashboard Logic
 │   └── Dockerfile           # Multi-stage build (Node -> Nginx)
 │
@@ -83,7 +83,7 @@ api-rate-limiting-gateway/
 
 ---
 
-## \uD83D\uDD27 Core Components
+## 🔧 Core Components
 
 ### 1. The Gateway (`/gateway`)
 The heart of the system. Designed to scale horizontally with zero shared memory by offloading all rate-limit state to Redis.
@@ -107,7 +107,7 @@ A React + Vite SPA for managing the gateway in real-time.
 
 ---
 
-## \uD83D\uDE80 Setup & Usage
+## 🚀 Setup & Usage
 
 ### 1. Start the System
 Ensure Docker is running, then launch the stack:
@@ -153,7 +153,7 @@ Check response headers:
 
 ---
 
-## \uD83E\uDDE0 Token Bucket Algorithm
+## 🧠 Token Bucket Algorithm
 
 The Gateway uses a **Token Bucket** algorithm for rate limiting.
 
