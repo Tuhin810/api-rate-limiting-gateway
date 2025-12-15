@@ -20,9 +20,9 @@ graph TD
     AdminUI -->|REST API| Gateway
     end
     
-    style Gateway fill:#f9f,stroke:#333,stroke-width:2px
-    style Redis fill:#ff9,stroke:#333,stroke-width:2px
-    style Backend fill:#9cf,stroke:blue,stroke-width:2px
+    style Gateway fill:#f9f,stroke:#333,stroke-width:2px,color:#000
+    style Redis fill:#ff9,stroke:#333,stroke-width:2px,color:#000
+    style Backend fill:#9cf,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ### 📊 Request Flow Lifecycle
