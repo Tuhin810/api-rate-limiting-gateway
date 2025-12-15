@@ -22,7 +22,7 @@ graph TD
     
     style Gateway fill:#f9f,stroke:#333,stroke-width:2px
     style Redis fill:#ff9,stroke:#333,stroke-width:2px
-    style Backend fill:#9cf,stroke:#333,stroke-width:2px
+    style Backend fill:#9cf,stroke:blue,stroke-width:2px
 ```
 
 ### 📊 Request Flow Lifecycle
